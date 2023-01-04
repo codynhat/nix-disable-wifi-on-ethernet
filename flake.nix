@@ -24,7 +24,7 @@
         echo "Wifi interface $WiFi"
         echo "Ethernet interface $ETHERNET_DEVICE"
         
-        EthernetStatus=$($IFCONFIG | grep -A5 $ETHERNET_DEVICE | grep status | cut -f2 -d' ')
+        EthernetStatus=$($IFCONFIG | grep -A7 $ETHERNET_DEVICE | grep status | cut -f2 -d' ')
         echo "Ethernet is currently $EthernetStatus"
         
         if [ "$EthernetStatus" != "active" ]; 
