@@ -13,7 +13,7 @@
       default = pkgs.writeShellScriptBin "disable-wifi-on-ethernet" ''
         #!/bin/bash
         
-        ETHERNET_DEVICE=en7
+        ETHERNET_DEVICE='en7\|en9'
         
         NETWORKSETUP=/usr/sbin/networksetup
         IFCONFIG=/sbin/ifconfig
